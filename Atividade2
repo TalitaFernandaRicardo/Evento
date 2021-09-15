@@ -1,0 +1,20 @@
+let dataDoEvento = [21, 11, 2021];
+let dataHoje = [15, 09, 2021];
+let idade = 17;
+
+
+
+
+if((dataDoEvento[2] - dataHoje[2]) < 0){
+    console.log("Impossível marcar, pois o ANO de hoje é posterior ao evento!!!");
+} else if ((dataDoEvento[1] - dataHoje[1]) < 0){
+    console.log("Impossível marcar, pois o MÊS de hoje é posterior ao evento!!");
+} else if (((dataDoEvento[0] - dataHoje[0]) < 0) && ((dataDoEvento[1] - dataHoje[1]) == 0)){
+    console.log("Impossível marcar, pois o DIA de hoje é posterior ao evento!");
+} else {
+    if(idade < 18){
+        console.log("Impossível marcar, pois a idade é inferior a 18 anos.");
+    } else {
+        console.log("Marcado com Sucesso!!");
+    }        
+}
