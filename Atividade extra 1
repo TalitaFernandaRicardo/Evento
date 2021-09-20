@@ -1,0 +1,29 @@
+let pecas = ["um","dois","tres", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"];
+let pesos = [100, 200, 300];
+const caixa =[];
+const pesoinf = [];
+const letras = [];
+const caixach = [];
+let i = 0;
+
+for(i=0; i<(pecas.length); i++){
+    if(pesos[i]>100 && pecas[i].length>=3 && caixa.length<10){
+        caixa.push(pecas[i]);
+        
+    }else if(pesos[i]<=100){
+        pesoinf.push(pecas[i]);
+               
+    }else if((pecas[i].length)<3){
+        letras.push(pecas[i]);
+
+    }else if((caixa.length)>= 10) {
+        caixach.push(pecas[i]);
+      
+    }
+
+    }
+    console.log("Cadastro da(s) peça(s) " +caixa+" cadastrado com sucesso");
+    console.log("Cadastro da(s) peça(s) " +pesoinf+" não pôde ser cadastrado devido ao peso não ser superior a 100g"); 
+    console.log("Cadastro da(s) peça(s) " +letras+" não pôde ser cadastrado devido ao nome da peça conter menos que 3 letras");
+    console.log("Cadastro da(s) peça(s) " +caixach+" não pôde ser cadastrado devido a caixa ter atingido o limite máximo");
+    
